@@ -1,5 +1,5 @@
 'use strict';
-const CACHE='moarok-shell-v3-sync';
+const CACHE='moarok-shell-v4-sync';
 const ASSETS=['/','/index.html','/manifest.webmanifest','/icon-192.png','/icon-512.png','/icon-maskable-512.png','/apple-touch-icon.png'];
 const ALLOWED=new Set(ASSETS);
 self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS.map(url=>new Request(url,{cache:'reload'})))))});
